@@ -1,0 +1,123 @@
+:root{
+     --color-1:#fff;
+     --color-2:#dde1e7;
+     --text-color:#000;
+     --background-1: #fff;
+     --background-2:rgb(0, 162, 255);
+     --box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+     --border: none;
+     --outline: none;
+     --border-right: 2px solis #000;
+     --border-radius: 10px;
+     --link-font-size:1.3rem;
+     --link-font-weight:540;
+     --padding: 30px;
+}
+.gallery{
+     padding: 10px 20px 30px;
+     margin: 5vh 0vh;
+     width: 100%;
+     height: 100%;
+     background-color: var(--background-2);
+}
+.heading_cont{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.heading{
+     display: flex;
+     justify-content:center;
+     align-items: center;
+     height: 50px;
+     width: 250px;
+     border-radius: 20px 0px;
+     background-color: var(--background-1);
+     margin: 5vh 0vh;
+}
+.heading h1{
+     color: var(--background-2);
+     font-size: 25px;
+}
+.images_cont{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.images{
+     width: 95%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+}
+.images .col{
+     width: 250px;
+     height: 200px;
+     padding: 5px;
+     margin: 10px 10px;
+     display: flex;
+     justify-content: center;
+     transition: all 0.4s;
+}
+.images .hide{
+     /* display: none; */
+}
+.images .col img{
+     max-width: 100%;
+     object-fit: cover;
+     border-radius: 10px;
+     border: 4px solid var(--background-1);
+}
+.images .col:hover {
+     transform:scale(1.1);
+}
+.see_more_button{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 3vh;
+}
+.see_more{
+     height: 35px;
+     width: 100px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 5px;
+     padding: 10px 5px;
+     background-color:var(--background-1);
+}
+.see_more li{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 4px;
+     border-radius: 3px;
+     list-style: none;
+     width: 25px;
+     height: 25px;
+     border: none;
+     outline: none;
+     background-color: var(--background-2);
+}
+.see_more li a{
+     text-decoration: none;
+     color: var(--color-1);
+     font-size:15px;
+     font-weight: 500;
+}
+@media screen and (max-width:600px) {
+     .images .col{
+          width: 100%;
+          height: 200px;
+          padding: 5px;
+     }
+     .images .hide{
+          display:block;
+     }
+     .google_map .map{
+          width: 100%;
+     }
+     
+}

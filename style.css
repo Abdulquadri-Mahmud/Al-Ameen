@@ -1,0 +1,631 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+:root{
+     --color-1:#fff;
+     --color-2:#dde1e7;
+     --text-color:#000;
+     --background-1: #fff;
+     --background-2:rgb(0, 162, 255);
+     --footer-backgorund:rgb(7, 72, 109);
+     --box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+     --border: none;
+     --outline: none;
+     --border-right: 2px solis #000;
+     --border-radius: 10px;
+     --link-font-size:1.3rem;
+     --link-font-weight:540;
+     --padding: 30px;
+}
+html{
+     scroll-behavior:auto;
+}
+body{
+     background-color: var(--background-1);
+     font-family: 'Barlow Condensed', sans-serif;
+     font-family: 'Rajdhani', sans-serif;
+}
+/********************* On a default page *********************/
+header{
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     height: 60px;
+     background-color:var(--background-2);
+     z-index: 1;
+     position: sticky;
+     top: 0;
+     left: 0;
+}
+.menu_bar_cont{
+     display: none;
+     position: relative;
+}
+.logo{
+     margin-top: 0vh;
+     padding: 4px 10px;
+}
+.logo h1{
+     color:var(--color-1);
+     font-size:23px;
+     text-align: center;
+}
+.logo h1 span{
+     color:var(--logo-color);
+}
+nav{
+     padding: 6px;
+}
+nav .tabs{
+     display: flex;
+     justify-content: space-around;
+     padding: 12px 20px;
+}
+nav .tabs li{
+     list-style: none;
+     padding: 0px 10px;
+}
+nav .tabs li a{
+     text-decoration: none;
+     color: var(--color-1);
+     font-size: 15px;
+     position:relative;
+     font-weight: 600;
+}
+nav .tabs li a.is-active{
+     color: var(--color-1);
+}
+nav .tabs li a.is-active::after{
+     content: '';
+     width: 60%;
+     height: 3px;
+     position: absolute;
+     bottom: -6px;
+     left: 0;
+}
+nav .tabs li a:hover{
+     color: var(--color-1);
+}
+nav .tabs li a::after{
+     content: '';
+     width: 0;
+     height: 3px;
+     position: absolute;
+     bottom: -6px;
+     left: 0;
+     background-color:var(--color-1);
+     transition: all 0.5s;
+}
+.tabs li a:hover::after{
+     width: 100%;
+}
+nav .tabs li.con{
+     margin-right: 1.4rem;
+}
+
+/********************Header Section***********************/
+main{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+main .clip_path{
+     width: 100%;
+     border-radius:0px 70px;
+     background-color: var(--background-2);
+     margin: 5vh;
+}
+.school_cont1{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+}
+.school_cont1 .school{
+     border-radius: 0px 0px 20px 20px;
+}
+.welcomeTextImage{
+     display: flex;
+     justify-content: space-around;
+     margin-top: 3vh;
+     padding: 20px;
+}
+.mainTextCont{
+
+}
+.mainText{
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 30% 75%, 10% 100%, 10% 75%, 0% 75%);
+    background-color: var(--background-1);
+    display: flex;
+    justify-content: center;
+    padding:40px 15px;
+}
+.mainText h3{
+     color: var(--background-2);
+}
+.image_cont{
+     
+}
+.image{
+     width:300px;
+     height: 200px;
+     display: flex;
+     justify-content: center;
+}
+.image img{
+     max-width: 100%;
+     border-radius: 5px;
+}
+.features{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 3vh 0vh 8vh;
+}
+.feature{
+     padding: 30px;
+     width: 95%;
+     border-radius: 0px 60px;
+     background-color: var(--background-2);
+     display: flex;
+     justify-content: space-evenly;
+     align-items:center;
+}
+.feature .col{
+     width: 45%;
+     height: 170px;
+     border-radius: 20px 0px;
+     background-color: var(--background-1);
+     padding: 5px;
+     margin: 0px 10px;
+}
+.students,.staff{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+.students .icon,.staff .icon{
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     padding: 5px;
+     margin-top: 6px;
+     background-color: var(--background-2);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.students .icon img,.staff .icon img{
+     max-width: 100%;
+     border-radius: 50%;
+}
+.students h4,.staff  h4{
+     padding:15px;
+     font-size: 19px;
+     color: var(--background-2);
+}
+.students p,.staff  p{
+     font-size: 16px;
+     font-weight: 600;
+     color: var(--background-2);
+}
+.session h4, .admission h4{
+     text-align: center;
+     padding: 3px 0px 7px;
+     font-size: 19px;
+     color: var(--background-2);
+}
+.session ul li{
+     list-style: none;
+     text-align: center;
+     font-size: 13px;
+     font-weight: 600;
+     color: var(--background-2);
+}
+.admission p{
+     font-size: 13px;
+     font-weight: 600;
+     color: var(--background-2);
+}
+/****************************Footer Section************************/
+footer{
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     width: 100%;
+     background-color: var(--footer-backgorund);
+     padding: 30px 10px 0px;
+}
+footer .col{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     margin-bottom: 20px;
+     width: 45%;
+}
+footer .contact h1{
+     padding-bottom: 10px;
+     font-size: 23px;
+     color: var(--color-1);
+}
+footer .contact h2{
+     padding-bottom: 8px;
+     font-size: 1.4rem;
+     font-weight: 600;
+     color: var(--color-1);
+     text-decoration: 1px underline var(--color-1);
+}
+footer .contact p{
+     padding-bottom: 8px;
+     font-size: 1rem;
+     font-weight: 500;
+     color: var(--color-1);
+}
+footer .contact p strong{
+     font-size: 1.3rem;
+     font-weight: 500;
+}
+
+footer .contact h1 span{
+     color: var(--color-1);
+     margin-bottom: 15px;
+}
+footer .follow_us{
+     padding: 10px 0px 0px;
+}
+footer .follow_us ul.icon{
+     display: flex;
+     justify-content: center;
+}
+footer .follow_us ul.icon li {
+     list-style: none;
+}
+footer .follow_us .icon li a{
+     padding: 3px 5px 5px 0px;
+     font-size: 1.2rem;
+     text-decoration: none;
+     color: var(--color-1);
+     transition: all 0.3s;
+}
+footer .follow_us .icon li a:hover{
+     color: var(--text-color);
+}
+.google_map .map{
+     width: 90%;
+     height: 170px;
+}
+.about h2, .resources h2{
+     color: var(--color-1);
+     text-decoration: 1px underline var(--color-1);
+}
+footer .links li, .resource li{
+     list-style: none;
+}
+footer .links li a, .resource li a{
+     text-decoration: none;
+     color:var(--color-1);
+     font-size: 15px;
+}
+footer .links li a:hover, .resource li a:hover{
+     color: var(--text-color);
+}
+
+.school_cont{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 5vh;
+     width: 100%;
+}
+.school{
+     width: 300px;
+     height: 40px;
+     border-radius: 20px 0px;
+     background-color: var(--background-1);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.school h1{
+     color: var(--background-2);
+}
+.about_resources{
+     display: flex;
+     justify-content:flex-start;
+     align-items: flex-start;
+     width: 100%;
+}
+.about,.resources{
+     width: 45%;
+}
+.refresh{
+     position: fixed;
+     bottom: 25px;
+     right: 15px;
+}
+.ref{
+     width: 40px;
+     height: 60px;
+     border-radius: 20px;
+     background-color: var(--background-1);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     animation: anime 0.8s linear alternate infinite;
+}
+.ref a {
+     text-decoration: none;
+}
+.ref a img{
+     max-width: 100%;
+}
+@keyframes  anime{
+     0%{
+          transform: translateY(0px);
+     }100%{
+          transform: translateY(5px);
+     }
+}
+footer .copy_right{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+footer .copy_right h4{
+     padding-bottom: 20px;
+     font-size: 0.8rem;
+     color: var(--color-1);
+}
+
+/**********************At 768px**************************/
+@media screen and (max-width:768px) {
+     header{
+          box-shadow: var(--box-shadow);
+     }
+     .nav{
+          display: none;
+     }
+     .menu_bar_cont{
+          display: block;
+          position: fixed;
+          top: 0;
+          right: 0;
+          width: 0px;
+          height: 100%;
+          background-color:var(--background-2);
+          transition:all 0.4s;
+     }
+     .menu_list li a i{
+          width: 26px;
+          padding: 0px 3px;
+     }
+     /********************** open menu bar **************************/
+     .open_menu_cont{
+          position: absolute;
+          top: 0.4rem;
+          right: 1rem;
+     }
+     .open_menu_cont .open_menu{
+          padding-top: 2px;
+          width: 33px;
+          height: 33px;
+          border-radius: 6px;
+          background-color: var(--background-1);
+     }
+     .open_menu_cont .open_menu p{
+          width: 22px;
+          height: 2.5px;
+          margin:5px;
+          background-color: var(--background-2);
+          display: block;
+     }
+     /********************** close menu bar *************************/
+     .close_menu_cont{
+          position: absolute;
+          top: 1.2rem;
+          left: 1rem;
+     }
+     .close_menu{
+          width: 30px;
+          height: 30px;
+          display:none;
+     }
+     .close_menu_cont .close_menu p{
+          height: 1px;
+          width: 18px;
+          background-color:var(--color-1);
+          margin: 5px;
+          padding: 1.1px;
+     }
+     .close_menu_cont .close_menu p:nth-child(1){
+          transform: rotate(45deg) translateX(5px);
+          transition: all 0.4s;
+     }
+     .close_menu_cont .close_menu p:nth-child(2){
+          display: none;
+     }
+     .close_menu_cont .close_menu p:nth-child(3){
+          transform: rotate(-45deg) translateX(5px);
+          transition: all 0.4s;
+     }
+     .menu{
+          margin-top: 6rem;
+     }
+     .menu .menu_list li{
+          padding: 14px 2vh;
+          list-style: none;
+          transition: all 0.6s;
+          text-align: center;
+     }
+     .menu .menu_list li i{
+          padding: 0px 8px 0px 0px;
+          font-size: 1.5rem;
+     }
+     .menu .menu_list li a{
+          text-decoration: none;
+          color: var(--color-1);
+          font-size: 18px;
+          font-weight: 500;
+          position:relative;
+          transition: all 0.3s;
+     }
+     .menu .menu_list li a:hover{
+          color: var(--logo-color);
+     }
+     .menu .menu_list li a::after{
+          content: '';
+          width: 0;
+          height: 3px;
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          background-color:var(--logo-color);
+          transition: all 0.5s;
+     }
+     .menu_list li a:hover::after{
+          width: 100%;
+     }
+     main .clip_path{
+          width: 95%;
+          border-radius:0px 70px;
+          background-color: var(--background-2);
+          margin: 5vh 0vh;
+          padding:30px;
+     }
+     .school_cont1{
+          margin-top: -3vh;
+          width: 100%;
+     }
+     .welcomeTextImage{
+          display: flex;
+          justify-content: space-around;
+     }
+     .mainText{
+          width: 250px;
+          height: 200px;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 30% 75%, 10% 100%, 10% 75%, 0% 75%);
+          background-color: var(--background-1);
+          display: flex;
+          justify-content: center;
+      }
+      .mainText{
+          padding:30px 5px;
+      }
+      .mainText h3{
+          font-size: 14px;
+      }
+      .image_cont{
+          margin: 0px 0px 0px 8px;
+      }
+     .image{
+          width:200px;
+          height: 200px;
+          background-color: var(--background-1);
+          display: flex;
+          justify-content: center;
+     }
+     .image img{
+          max-width: 100%;
+     }
+     .feature{
+          display: flex;
+          justify-content: space-evenly;
+          align-items:center;
+          flex-wrap: wrap;
+     }
+     .feature .col{
+          width: 45%;
+          height: 150px;
+          border-radius: 15px 0px;
+          background-color: var(--background-1);
+          padding: 5px;
+          margin: 10px 10px;
+     }
+     footer .col{
+          width: 100%;
+     }
+     .about_resources{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+     }
+     .about,.resources{
+          width: 45%;
+     }
+     .copy_right{
+          margin: 4vh 0vh 0vh;
+     }
+     .google_map .map{
+          width: 100%;
+          height: 350px;
+          border-radius: 5px;
+     }
+}
+@media screen and (max-width:600px) {
+     main .clip_path{
+          width: 95%;
+          border-radius:0px 70px;
+          background-color: var(--background-2);
+          margin: 5vh 0vh;
+          padding:30px;
+     }
+     .school_cont1{
+          margin-top: -4.7vh;
+          width: 100%;
+     }
+     .school{
+          height: 50px;
+     }
+     .welcomeTextImage{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+     }
+     .mainText{
+          width: 270px;
+          height: 200px;
+     }
+     .image{
+          width:300px;
+          height: 200px;
+          background-color: var(--background-2);
+          display: flex;
+          justify-content: center;
+          padding: 10px 0px;
+     }
+     .image img{
+          max-width: 100%;
+     }
+     .feature .col{
+          width: 95%;
+          height: 170px;
+          border-radius: 15px 0px;
+          background-color: var(--background-1);
+          padding: 5px;
+          margin: 10px 10px;
+     }
+     footer .col{
+          width: 100%;
+     }
+     .about_resources{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+     }
+     .about,.resources{
+          width: 45%;
+     }
+     .copy_right{
+          margin: 4vh 0vh 0vh;
+     }
+}
